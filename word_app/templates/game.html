@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple word game</title>
+</head>
+<body>
+	<h2>Simple Word Game</h2>
+	<form action='/play/' method='POST'> {% csrf_token %}
+		<button>Play Game</button>	
+	</form>	
+	<br><br>
+	<form action='/topscores/' method='POST'>{% csrf_token %}
+		<button>Top Scores</button>
+	</form>	
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Scores</title>
+</head>
+<body>
+
+	<table border=1>
+	{% for scores in all_scores %}
+		<tr>
+			<td>{{ scores.word }}</td><td>{{ scores.score }}</td><td>{{ scores.dateval }}</td>
+		</tr>
+	{% endfor %}	
+	</table>
+
+</body>
+</html>

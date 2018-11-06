@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Play Game</title>
+</head>
+<body>
+	<h3>Make a word from the below letters</h3>
+	{% for ch in letters %}
+		<span style="display:inline-block"><h4>{{ ch }}</h4></span>
+	{% endfor %}
+
+	<form action="/calculate/" method="POST"> {% csrf_token %}
+		Enter the word: <input type="text" name="inword" required>
+		<button>Submit</button>
+	</form>
+
+
+	<!-- {% if word != None %} -->
+		<b>Word :</b> {{ word }}<br>
+		<b>Word score:</b> {{ word_score }}<br>
+		<b>Max Word:</b> {{ max_word }}<br>
+		<b>Max Word score:</b> {{ max_word_score }}<br>
+		<b>Game Score:</b> {{ game_score }}<br>
+	<!-- {% endif %} -->
+
+</body>
+</html>
